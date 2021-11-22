@@ -1,0 +1,29 @@
+spring:
+  cloud:
+    gateway:
+      default-filters:
+        - DedupeResponseHeader=Access-Control-Allow-Credentials Access-Control-Allow-Origin, RETAIN_FIRST
+      routes:
+        - id: users_route
+          uri: ${USERS_URL}
+          predicates:
+            - Path=/api/users/**
+        - id: documents_route
+          uri: ${DOCUMENTS_URL}
+          predicates:
+            - Path=/api/documents/**
+
+        - id: geolocation_route
+          uri: ${GEOLOCATION_URL}
+          predicates:
+            - Path=/api/geolocation/**
+        - id: news_route
+          uri: ${NEWS_URL}
+          predicates:
+            - Path=/api/news/**
+      globalcors:
+        corsConfigurations:
+          '[/**]':
+            allowedMethods: "*"
+            allowedOrigins: ${FRONT_URL}
+            allowedHeaders: "*"
