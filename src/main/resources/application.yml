@@ -14,7 +14,7 @@ spring:
             - Path=/api/documents/**
 
         - id: geolocation_route
-          uri: ${GEOLOCATION_URL}
+          uri: ${GEOLOCATIONS_URL}
           predicates:
             - Path=/api/geolocation/**
         - id: news_route
