@@ -17,3 +17,5 @@ NEWS_URL = http://localhost:8081
 DOCUMENTS_URL = http://localhost:8082
 
 GEOLOCATIONS_URL = http://localhost:8083
+
+FRONT_URL = http://localhost:8080
