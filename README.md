@@ -8,14 +8,4 @@ This gateway allows to know the location of each microservice.
 
 ## Launch microservice
 
-Run `bootRun` with the given environment variables:
-
-USERS_URL = http://localhost:8084
-
-NEWS_URL = http://localhost:8081
-
-DOCUMENTS_URL = http://localhost:8082
-
-GEOLOCATIONS_URL = http://localhost:8083
-
-FRONT_URL = http://localhost:8080
+Run `bootRun` with the environment variables given in the documentation.
